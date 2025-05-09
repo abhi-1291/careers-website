@@ -7,29 +7,27 @@ JOBS = [
         "id": 1,
         "title": "Data Analyst",
         "location": "Bengaluru, India",
-        "Salary": "Rs. 10,00,000"
+        "salary": "Rs. 10,00,000"
 
     },
     {
         "id": 2,
         "title": "Data Scientist",
         "location": "Delhi, India",
-        "Salary": "Rs. 15,00,000"
+        "salary": "Rs. 15,00,000"
 
     },
     {
         "id": 3,
         "title": "Frontend Engineer",
-        "location": "Remote",
-        "Salary": "Rs. 12,00,000"
+        "location": "Remote"
 
     },
     {
         "id": 4,
         "title": "Backend Engineer",
         "location": "San Francisco, USA",
-        "location": "Remote",
-        "Salary": "$120,000"
+        "salary": "$120,000"
 
     }
 
@@ -38,7 +36,7 @@ JOBS = [
 
 @app.route("/")
 def hello_world():
-    return render_template("home.html")
+    return render_template("home.html", jobs=JOBS, company_name = "KickStart")
 
 if __name__ == "__main__":
     app.run(debug=True)
