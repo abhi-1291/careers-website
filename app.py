@@ -27,7 +27,7 @@ JOBS = [
         "id": 4,
         "title": "Backend Engineer",
         "location": "San Francisco, USA",
-        "salary": "$120,000"
+        "salary": "$150,000"
 
     }
 
@@ -36,7 +36,7 @@ JOBS = [
 
 @app.route("/")
 def hello_world():
-    return render_template("home.html", jobs=JOBS, company_name = "KickStart")
+    return render_template("home.html", jobs=JOBS)
 
 if __name__ == "__main__":
     app.run(debug=True)
